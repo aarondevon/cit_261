@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>parse and stringify</title>
+  <script>
+
+  function stringIt() {
+    let myObj = {
+      firstName: "Aaron",
+      lastName: "Sawyer",
+      age: 32,
+      city: "Minnetonka"
+    };
+    let myJSON = JSON.stringify(myObj);
+    document.getElementById("testOne").innerHTML = myJSON;
+  }
+
+
+function parseIt() {
+  let parsedObj = JSON.parse('{"firstName": "Aaron", "lastName": "Sawyer", "age": 32, "city": "Minnetonka"}');
+  document.getElementById("testTwo").innerHTML = parsedObj.firstName + " is pretty neat. He is " + parsedObj.age + " years old.";
+}
+  </script>
+</head>
+  <body>
+
+    <h2>Stringify</h2>
+
+    <p id="testOne"></p>
+    <button type="button" onclick="stringIt()">Try it out</button>
+
+    <h2>Parse</h2>
+    <p id="testTwo"></p>
+    <button type="button" onclick="parseIt()">Try it out</button>
+  </body>
+</html>
