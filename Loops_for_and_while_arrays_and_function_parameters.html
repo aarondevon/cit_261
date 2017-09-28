@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Loops for and while, array, and function parameters</title>
+  </head>
+  <body>
+    <h2>Inspect to see code working</h2>
+    <script>
+    // I am an array, JS does not have associative arrays
+    let friendsArr = ["John", "Abigail", "Mathew", "Joe", "Kali"];
+
+    // I am a for loop
+    for (let i = 0; i < friendsArr.length; i++) {
+      console.log("My number " + (i + 1) + " friend is " + friendsArr[i]);
+    }
+
+    // I am a while loop
+    let countNumber = 5
+    while (countNumber >= 1) {
+      console.log(countNumber);
+      countNumber -= 1;
+    }
+
+    // numOne and numTwo are parameters. They are essentiall place holders and
+    // similar to variables
+    function addItUp(numOne, numTwo) {
+      console.log("Adding " + numOne + " and " + numTwo);
+    }
+
+    // calling addItUp and passing in arguments. 4 and 5 will be my arguments
+    addItUp(4, 5);
+    </script>
+  </body>
+</html>
